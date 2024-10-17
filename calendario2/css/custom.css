@@ -1,0 +1,45 @@
+body {
+    margin: 0px 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#calendar {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+body {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    display: flex;
+    width: 100%;
+    padding: 20px 10%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 3px 10px black;
+    background-color: #0097b2;
+    color: white;
+    margin-bottom: 30px;
+}
+.logo a{
+    font-size: 1.2rem;
+}
+.links{
+    width: 30%;
+    justify-content: space-between;
+    display: flex;
+}
+.links a, .logo a,.contato a{
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+
+}
+.links a:hover, .contato a:hover{
+    text-decoration: underline;
+}
