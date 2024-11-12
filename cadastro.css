@@ -199,3 +199,17 @@ body{
     display: flex;
     padding: 10px;
 }
+@media(max-width: 720px){
+    .loginLeft1{
+        display: none;
+    }
+    .loginRight1{
+        width: 100%;
+    }
+    .card-login1{
+        width: 60%;
+    }
+    .loginRight{
+        width: 75%;
+    }
+}

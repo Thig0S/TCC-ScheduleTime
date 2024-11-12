@@ -1,11 +1,11 @@
 <?php
-session_start();
-if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location:.//login.php');
-}
-$logado = $_SESSION['email'];
+// session_start();
+// if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
+//     unset($_SESSION['email']);
+//     unset($_SESSION['senha']);
+//     header('Location:.//login.php');
+// }
+// $logado = $_SESSION['email'];
 
 ?>
 
@@ -35,9 +35,6 @@ $logado = $_SESSION['email'];
             <a href="index.php">Agendamentos</a>
             <a href="">Sobre</a>
             <a href="../PHP/sair.php">Sair</a>
-        </div>
-        <div class="contato">
-            <a href="#">Contato</a>
         </div>
     </div>
     <div class="container">
