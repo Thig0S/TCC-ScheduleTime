@@ -1,11 +1,11 @@
 <?php
-// session_start();
-// if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
-//     unset($_SESSION['email']);
-//     unset($_SESSION['senha']);
-//     header('Location:login.php');
-// }
-// $logado = $_SESSION['email'];
+session_start();
+if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+    header('Location:login.php');
+}
+$logado = $_SESSION['email'];
 
 ?>
 
@@ -39,14 +39,9 @@
         </div>
         <div class="containerLeft">
             <div class="conteudoLeft">
-                <h2>O seu site de Agendamentos ScheduleTime</h2>
-                <p>m bolo simples fofinsho e quentinho com uma xícara de café pode ser tudo o que você precisa numa
-                    tarde
-                    chuvosa. E essa aqui é a receita que pode dar isso para você. Essa receita é bem simples e não leva
-                    muitos ingredientes. A massa branca pode ser usada com recheios de diferentes sabores e irá combinar
-                    com todos, já que não tem nenhum sabor dominante mais forte. Há quem diga que a massa branca é "sem
-                    graça", mas se você quiser, pode incrementar o bolo com alguma cobertura de brigadeiro, beijinho,
-                    leite condensado para dar mais sabor e deixar o bolo ainda mais molhadinho. </p>
+                <h2>Bem-vindo ao nosso sistema de agendamento de laboratórios ScheduleTime!</h2>
+                <p>Aqui, você pode agendar de forma prática e rápida o uso dos nossos laboratórios para suas atividades acadêmicas, profissionais ou de pesquisa. Nossa plataforma foi desenvolvida para facilitar a gestão de horários, permitindo que você escolha o momento mais conveniente para realizar seus trabalhos, 
+                    sem complicações. </p>
                 <button class="btnPadrao">Saiba Mais</button>
             </div>
         </div>
@@ -63,12 +58,10 @@
                     d="M360-840v-80h240v80H360Zm80 440h80v-240h-80v240Zm40 320q-74 0-139.5-28.5T226-186q-49-49-77.5-114.5T120-440q0-74 28.5-139.5T226-694q49-49 114.5-77.5T480-800q62 0 119 20t107 58l56-56 56 56-56 56q38 50 58 107t20 119q0 74-28.5 139.5T734-186q-49 49-114.5 77.5T480-80Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-280Z" />
             </svg>
             <hr>
+            <br>
+            <strong>Facilidade: </strong>
             <div class="textContainer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus voluptates natus nemo,
-                    nihil
-                    iusto aliquid ratione nostrum explicabo vel recusandae iste officiis distinctio, laboriosam enim
-                    facere.
-                    Asperiores, labore sequi?</p>
+                <p>Agendar seus exames nunca foi tão simples. Com nossa plataforma online, você pode agendar suas aulas em salas e laboratoratórios de forma prática e rápida, diretamente do seu computador ou celular.</p>
             </div>
         </div>
         <div class="containerProposta">
@@ -77,12 +70,12 @@
                     d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
             </svg>
             <hr>
+            <br>
+            <strong>Disponibilidade: </strong>
             <div class="textContainer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus voluptates natus nemo,
-                    nihil
-                    iusto aliquid ratione nostrum explicabo vel recusandae iste officiis distinctio, laboriosam enim
-                    facere.
-                    Asperiores, labore sequi?</p>
+                <p>Oferecemos uma plataforma segura para o gerenciamento de reservas, 
+                    evitando conflitos e garantindo que as informações de reservas sejam precisas.
+                    Nossa plataforma assegura a proteção de dados pessoais de usuários e permite a fácil visualização do histórico de agendamentos. </p>
             </div>
         </div>
         <div class="containerProposta">
@@ -91,12 +84,10 @@
                     d="M400-240v-80h240v80H400Zm-158 0L15-467l57-57 170 170 366-366 57 57-423 423Zm318-160v-80h240v80H560Zm160-160v-80h240v80H720Z" />
             </svg>
             <hr>
+            <br>
+            <strong>Segurança e Confiança: </strong>
             <div class="textContainer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus voluptates natus nemo,
-                    nihil
-                    iusto aliquid ratione nostrum explicabo vel recusandae iste officiis distinctio, laboriosam enim
-                    facere.
-                    Asperiores, labore sequi?</p>
+                <p>Oferecemos uma plataforma segura e eficiente para o gerenciamento de agendamentos de exames laboratoriais, garantindo uma experiência sem conflitos e com informações precisas. Nossa solução prioriza a proteção dos dados pessoais dos usuários.</p>
             </div>
         </div>
     </div>
@@ -105,11 +96,11 @@
             <h2>Equipe ScheduleTime</h2>
             <div class="divider">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quo cumque, repudiandae mollitia minus,
-                odio neque error consequatur dicta totam inventore beatae optio ab labore placeat ducimus veniam. Illum,
-                optio Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quos facere in omnis! Et,
-                quam incidunt! Repudiandae impedit repellat officiis neque optio dolorum voluptates, necessitatibus iure
-                qui natus distinctio odit?.</p>
+            <p>
+            A equipe ScheduleTime inicialmente composta pelo integrantes: Thiago, Mauricio, Gabriel e Jean foi responsável por este trabalho de TCC é composta por estudantes dedicados das áreas de Programação Web, com o objetivo de criar uma plataforma de agendamento de exames laboratoriais para o agendamento de Salas e Laboratórios do colégio CEDUP. Durante o desenvolvimento do projeto, nossos membros 
+            combinaram conhecimentos acadêmicos e experiências práticas para garantir que a solução atendesse
+             às necessidades dos usuários e fosse tecnicamente robusta. 
+            </p>
         </div>
         <div class="imgEquipe">
             <img src="./img/equipe2.jpg" alt="">

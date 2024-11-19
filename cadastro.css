@@ -1,6 +1,7 @@
 body{
     margin: 0;
     color: white;
+    font-family: sans-serif;
 }
 .custom-confirm-button{
     background-color: #0097b2;
@@ -79,7 +80,7 @@ body{
     width: 100%;
 }
 .footer h2{
-    font-size: 2.5vh;
+    font-size: 2vh;
     font-weight: 2;
 }
 .mainLogin1{
