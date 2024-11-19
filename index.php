@@ -124,9 +124,8 @@ $logado = $_SESSION['email'];
                 <hr>
             </div>
             <div class="">
-                <p>lorem</p>
-                <p>lorem</p>
-                <p>lorem</p>
+                <p>ScheduleTime</p>
+                <p>Nossa Equipe</p>
             </div>
         </div>
         <div class="conteudoFooter">
