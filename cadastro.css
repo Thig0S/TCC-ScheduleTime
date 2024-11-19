@@ -37,7 +37,8 @@ body{
 .card-login > h2{
     margin: 0;
     font-size: 35px;
-    color: black;
+    color: rgb(255, 255, 255);
+    text-shadow: black 1px 3px;
 }
 .textfield{
     display: flex;
@@ -120,7 +121,9 @@ body{
 .card-login1 > h2{
     margin: 0;
     font-size: 35px;
-    color: black;
+    color: rgb(255, 255, 255);
+    text-shadow: black 1px 3px;
+
 }
 .card-login > a{
     color: white;
