@@ -17,7 +17,9 @@ session_start();
     <form action="PHP/testeLogin.php" method="post">
         <div class="mainLogin1">
             <div class="loginLeft1">
-                <img src="img/Schedule_Logo.png" alt="" id="logo">
+                <a href="index.php">
+                    <img src="img/Schedule_Logo.png" alt="" id="logo">
+                </a>
             </div>
             <div class="loginRight1">
                 <div class="card-login1">

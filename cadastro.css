@@ -38,7 +38,7 @@ body{
     margin: 0;
     font-size: 35px;
     color: rgb(255, 255, 255);
-    text-shadow: black 1px 3px;
+    text-shadow: black 1px 2px;
 }
 .textfield{
     display: flex;
@@ -122,7 +122,7 @@ body{
     margin: 0;
     font-size: 35px;
     color: rgb(255, 255, 255);
-    text-shadow: black 1px 3px;
+    text-shadow: black 1px 2px;
 }
 .card-login > a{
     color: white;

@@ -25,6 +25,8 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         if (password_verify($senha, $user['senha'])) {
             // Se a senha estiver correta
             $_SESSION['email'] = $email;
+            $_SESSION['name'] = $user['name']; // Armazena o nome do usuário na sessão
+
             header('Location: ../index.php');
         } else {
             // Se a senha estiver incorreta

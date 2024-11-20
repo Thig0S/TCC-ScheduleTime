@@ -27,6 +27,7 @@ body {
     width: 30%;
     justify-content: space-between;
     display: flex;
+    align-items: center;
 }
 .links a, .logo a,.contato a{
     text-decoration: none;
@@ -45,14 +46,14 @@ body {
 }
 footer{
     width: 100%;
-    height: 25vh;
+    height:auto;
     background-color: #181818;
     padding: 50px 20px;
     display: flex;
     justify-content: space-evenly;
     color: #fff;
 }
-footer .title{
+.footerSemBoot .title{
     margin-bottom: 5px;
 }
 .container {
@@ -125,7 +126,7 @@ footer .title{
 
 .conteudoLeft>h2 {
     margin-bottom: 10px;
-    font-size: 1.7rem;
+    font-size: 1.7rem ;
 }
 
 .conteudoLeft>p {
@@ -178,7 +179,7 @@ footer .title{
 
 .proposta {
     width: 98.6vw;
-    height: 38vh;
+    height: 50vh;
     display: flex;
     justify-content: space-evenly;
     padding: 20px 100px;
@@ -198,7 +199,7 @@ footer .title{
     height: 80%;
 }
 .containerProposta P {
-    padding: 20PX;
+    padding: 5PX;
     max-height: 200px;
     overflow-y: auto;
     height: 100%;
@@ -231,4 +232,38 @@ footer .title{
     width: 250px;
     border-radius: 10px;
     box-shadow: 5px 5px 30px black;
+}
+.avisoContainer{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.aviso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center; 
+    width: 30%;
+    height: auto;
+    border: solid 5px #0097b2;
+    border-radius: 50px;
+    padding: 30px;
+    box-shadow: 5px 1px 10px black;
+}
+.aviso h2{
+    font-weight: bolder;
+}
+
+.avisoText{
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.avisoBtn{
+    margin-top: 1rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
 }
