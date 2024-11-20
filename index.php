@@ -62,9 +62,11 @@ $name = ucfirst($name);
         <div class="containerLeft">
             <div class="conteudoLeft">
                 <h2>Bem-vindo ao nosso sistema de agendamento de laboratórios ScheduleTime!</h2>
-                <p>Aqui, você pode agendar de forma prática e rápida o uso dos nossos laboratórios para suas atividades
+                <p>Aqui, você pode agendar de forma prática e rápida o uso dos laboratórios da Rede CEDUP para suas
+                    atividades
                     acadêmicas, profissionais ou de pesquisa. Nossa plataforma foi desenvolvida para facilitar a gestão
-                    de horários, permitindo que você escolha o momento mais conveniente para realizar seus trabalhos,
+                    de horários, permitindo que você escolha o momento mais conveniente para realizar seus trabalhos e
+                    aulas
                     sem complicações. </p>
                 <button class="btnPadrao">Saiba Mais</button>
             </div>
@@ -122,8 +124,8 @@ $name = ucfirst($name);
             <p>
                 A equipe ScheduleTime inicialmente composta pelo integrantes: Thiago, Mauricio, Gabriel e Jean foi
                 responsável por este trabalho de TCC é composta por estudantes dedicados das áreas de Programação Web,
-                com o objetivo de criar uma plataforma de agendamento de exames laboratoriais para o agendamento de
-                Salas e Laboratórios do colégio CEDUP.
+                com o objetivo de criar uma plataforma de agendamento de laboratoratórios e salas de aula do colégio
+                CEDUP.
             </p>
         </div>
         <div class="imgEquipe">
@@ -150,6 +152,7 @@ $name = ucfirst($name);
             <div class="">
                 <p>ScheduleTime</p>
                 <p>Nossa Equipe</p>
+                <p>Fale Conosco</p>
             </div>
         </div>
         <div class="conteudoFooter">

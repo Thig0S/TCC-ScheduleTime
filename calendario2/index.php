@@ -5,7 +5,13 @@ if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true
     unset($_SESSION['senha']);
     header('Location:../Needlogin.php');
 }
-$logado = $_SESSION['email'];
+if ((isset($_SESSION["email"]) == true) and (isset($_SESSION["senha"]) == true)) {
+
+    $logado = $_SESSION['email'];
+
+}
+$name = $_SESSION['name'];
+$name = ucfirst($name);
 
 ?>
 
@@ -32,9 +38,25 @@ $logado = $_SESSION['email'];
             <a href="../index.php">ScheduleTime🖐🕒</a>
         </div>
         <div class="links">
-            <a href="index.php">Agendamentos</a>
+            <a href="./calendario2/index.php">Agendamentos</a>
             <a href="">Sobre</a>
-            <a href="../PHP/sair.php">Sair</a>
+            <?php
+            if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
+                echo ' <a href="login.php">Entrar</a>';
+            } else {
+                echo "<div class='btn-group'>
+                        <a type='button' class=' dropdown-toggle' data-bs-toggle='dropdown' aria-expanded='false'>
+                            $name
+                        </a>
+                        <ul class='dropdown-menu'>
+                            <li><a class='dropdown-item text-dark' href='#' >Agendamentos</a></li>
+                            <li><a class='dropdown-item text-dark' href='#'>Sua Conta</a></li>
+                            <li><hr class='dropdown-divider '></li>
+                            <li><a class='dropdown-item text-dark' href='../PHP/sair.php'>Sair</a></li>
+                        </ul>
+                    </div>";
+            }
+            ?>
         </div>
     </div>
     <div class="container">
