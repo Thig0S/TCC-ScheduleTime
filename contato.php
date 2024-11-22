@@ -3,7 +3,6 @@ session_start();
 if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
     unset($_SESSION['email']);
     unset($_SESSION['senha']);
-    header('Location:../Needlogin.php');
 }
 if ((isset($_SESSION["email"]) == true) and (isset($_SESSION["senha"]) == true)) {
 
@@ -57,17 +56,20 @@ $name = ucfirst($name);
     </div>
     <div class="contato">
         <div class="formulario">
-            <h2>Entre em Contato Com a Equipe Schedule!</h2>
-            <hr>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary">Enviar</button>
+            <form action="enviarEmail.php" method="POST">
+                <h2>Entre em Contato Com a Equipe Schedule!</h2>
+                <hr>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Digite seu Email para Contato:</label>
+                    <input type="email" class="form-control" id="email" name='email' placeholder="nome@exemplo.com"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Como podemos ajudar?</label>
+                    <textarea class="form-control" id="assunto" name='assunto' rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
         </div>
     </div>
     <footer>

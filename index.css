@@ -53,6 +53,9 @@ footer{
     justify-content: space-evenly;
     color: #fff;
 }
+.title h3{
+    font-size: 1.4rem;
+}
 .footerSemBoot .title{
     margin-bottom: 5px;
 }
@@ -266,4 +269,23 @@ footer{
     width: 80%;
     display: flex;
     justify-content: space-evenly;
+}
+.contato{
+    width: 98vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    width: 50%;
+    height: auto;
+    padding: 2rem;
+    background-color: #b1b0b02a;
+    border-radius: 10px;
+    border: rgb(104, 103, 103) solid 1px;
+    box-shadow: 1px 1px 10px black;
+}
+.formulario h2{
+    font-weight: 600;
 }

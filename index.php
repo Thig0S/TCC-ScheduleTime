@@ -9,8 +9,9 @@ if ((isset($_SESSION["email"]) == true) and (isset($_SESSION["senha"]) == true))
     $logado = $_SESSION['email'];
 
 }
-$name = $_SESSION['name'];
-$name = ucfirst($name);
+if (isset($_SESSION['name'])) {
+    $name = ucfirst($_SESSION['name']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +34,7 @@ $name = ucfirst($name);
         </div>
         <div class="links">
             <a href="./calendario2/index.php">Agendamentos</a>
-            <a href="">Sobre</a>
+            <a href="contato.php">Contato</a>
             <?php
             if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
                 echo ' <a href="login.php">Entrar</a>';
