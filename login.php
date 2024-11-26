@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+    <title>Login-Schedule</title>
     <link rel="icon" href="img/top.png." type="image/x-icon">
     <link rel="stylesheet" href="cadastro.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro-Schedule</title>
     <link rel="icon" href="img/top.png." type="image/x-icon">
     <link rel="stylesheet" href="cadastro.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
                     echo "<script>
                 document.addEventListener('DOMContentLoaded', function() {
                     Swal.fire({
-                        title: 'As senhas não são iguais!',
+                        title: 'As senhas não conferem!',
                         icon: 'warning',
                         customClass: {
                     confirmButton: 'custom-confirm-button' // Classe personalizada para o botão

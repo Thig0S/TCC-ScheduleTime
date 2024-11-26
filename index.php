@@ -62,7 +62,7 @@ if (isset($_SESSION['name'])) {
         </div>
         <div class="containerLeft">
             <div class="conteudoLeft">
-                <h2>Bem-vindo ao nosso sistema de agendamento de laboratórios ScheduleTime!</h2>
+                <h2>Bem-vindo ao nosso sistema de agendamento ScheduleTime!</h2>
                 <p>Aqui, você pode agendar de forma prática e rápida o uso dos laboratórios da Rede CEDUP para suas
                     atividades
                     acadêmicas, profissionais ou de pesquisa. Nossa plataforma foi desenvolvida para facilitar a gestão

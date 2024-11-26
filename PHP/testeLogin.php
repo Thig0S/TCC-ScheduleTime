@@ -32,6 +32,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             // Se a senha estiver incorreta
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
+            $_SESSION['testLogin'] = true;
             header('Location: ../login.php');
         }
     }
