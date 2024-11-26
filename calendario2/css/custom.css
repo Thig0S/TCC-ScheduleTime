@@ -43,3 +43,12 @@ body {
 .links a:hover, .contato a:hover{
     text-decoration: underline;
 }
+.selectButton{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: rgb(65, 64, 64);
+}
+.selectButton:focus{
+    box-shadow: #0097b2 1px 1px 15px;
+}

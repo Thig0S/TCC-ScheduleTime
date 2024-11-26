@@ -68,6 +68,14 @@ $name = ucfirst($name);
                 <span id="msg"></span>
 
                 <form class="ms-2 me-2 row g-3">
+                    <label for="cad_lab">Selecione o Laboratório:</label>
+                    <select id="cad_lab" class="selectButton" name="cad_lab" required>
+                        <option value="">Escolha um laboratório</option>
+                        <option value="1">Laboratório De Informática 01</option>
+                        <option value="2">Laboratório De Informática 02</option>
+                        <option value="3">Laboratório De Química 01</option>
+                        <option value="3">Laboratório De Química 02</option>
+                    </select>
 
                     <div class="col-md-5 col-sm-12">
                         <label class="form-label" for="user_id">Pesquisar eventos do profissional</label>
