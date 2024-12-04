@@ -6,52 +6,65 @@ include_once './conexao.php';
 // Receber os dados enviados pelo JavaScript
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+// Verificar se os dados necessários foram enviados
+if (!$dados['cad_start'] || !$dados['cad_end']) {
+    echo json_encode(['status' => false, 'msg' => 'Erro: Dados incompletos enviados!']);
+    exit;
+}
+
 // Verificar se há conflitos de horário no banco de dados
 $query_check_conflict = "
     SELECT id 
     FROM events 
     WHERE 
-        (:start < end AND :end > start) 
-        AND (user_id = :user_id OR client_id = :client_id)
+        :start < end AND :end > start
 ";
 $result_check_conflict = $conn->prepare($query_check_conflict);
-
-// Substituir os parâmetros
 $result_check_conflict->bindParam(':start', $dados['cad_start']);
 $result_check_conflict->bindParam(':end', $dados['cad_end']);
-$result_check_conflict->bindParam(':user_id', $dados['cad_user_id']);
-$result_check_conflict->bindParam(':client_id', $dados['cad_client_id']);
-
-// Executar a consulta
 $result_check_conflict->execute();
+
+// Verificar se há horários inválidos
+
 
 // Verificar se há conflitos
 if ($result_check_conflict->rowCount() > 0) {
-    // Conflito encontrado
     $retorna = [
         'status' => false,
         'msg' => 'Erro: Já existe um evento cadastrado neste horário!'
     ];
+} elseif (!empty($res)) {
+    $retorna = [
+        'status' => false,
+        'msg' => 'Existem registros com hora de término igual ou antes da hora de início!'
+    ];
 } else {
-    // Recuperar os dados do usuário no banco de dados
-    $query_user = "SELECT id, name, email FROM users WHERE id =:id LIMIT 1";
+    // Recuperar os dados do usuário
+    $query_user = "SELECT id, name, email FROM users WHERE id = :id LIMIT 1";
     $result_user = $conn->prepare($query_user);
     $result_user->bindParam(':id', $dados['cad_user_id']);
     $result_user->execute();
     $row_user = $result_user->fetch(PDO::FETCH_ASSOC);
+    if (!$row_user) {
+        echo json_encode(['status' => false, 'msg' => 'Erro: Usuário não encontrado!']);
+        exit;
+    }
 
-    // Recuperar os dados do cliente no banco de dados
-    $query_client = "SELECT id, name, email FROM users WHERE id =:id LIMIT 1";
+    // Recuperar os dados do cliente
+    $query_client = "SELECT id, name, email FROM users WHERE id = :id LIMIT 1";
     $result_client = $conn->prepare($query_client);
     $result_client->bindParam(':id', $dados['cad_client_id']);
     $result_client->execute();
     $row_client = $result_client->fetch(PDO::FETCH_ASSOC);
+    if (!$row_client) {
+        echo json_encode(['status' => false, 'msg' => 'Erro: Cliente não encontrado!']);
+        exit;
+    }
 
     // Criar a QUERY para cadastrar evento no banco de dados
-    $query_cad_event = "INSERT INTO events (title, color, start, end, obs, user_id, client_id) VALUES (:title, :color, :start, :end, :obs, :user_id, :client_id)";
+    $query_cad_event = "INSERT INTO events (title, color, start, end, obs, user_id, client_id) 
+                        VALUES (:title, :color, :start, :end, :obs, :user_id, :client_id)";
     $cad_event = $conn->prepare($query_cad_event);
-
-    // Substituir os parâmetros pelo valor
     $cad_event->bindParam(':title', $dados['cad_title']);
     $cad_event->bindParam(':color', $dados['cad_color']);
     $cad_event->bindParam(':start', $dados['cad_start']);
@@ -60,7 +73,6 @@ if ($result_check_conflict->rowCount() > 0) {
     $cad_event->bindParam(':user_id', $dados['cad_user_id']);
     $cad_event->bindParam(':client_id', $dados['cad_client_id']);
 
-    // Verificar se conseguiu cadastrar corretamente
     if ($cad_event->execute()) {
         $retorna = [
             'status' => true,
@@ -83,5 +95,5 @@ if ($result_check_conflict->rowCount() > 0) {
     }
 }
 
-// Converter o array em JSON e retornar para o JavaScript
+// Retornar como JSON
 echo json_encode($retorna);

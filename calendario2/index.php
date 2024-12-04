@@ -38,7 +38,7 @@ $name = ucfirst($name);
             <a href="../index.php">ScheduleTime🖐🕒</a>
         </div>
         <div class="links">
-            <a href="./calendario2/index.php">Agendamentos</a>
+            <a href="../calendario2/index.php">Agendamentos</a>
             <a href="../contato.php">Contato</a>
             <?php
             if ((!isset($_SESSION["email"]) == true) and (!isset($_SESSION["senha"]) == true)) {
@@ -158,10 +158,10 @@ $name = ucfirst($name);
                             <dt class="col-sm-3">ID do Cliente: </dt>
                             <dd class="col-sm-9" id="visualizar_client_id"></dd>
 
-                            <dt class="col-sm-3">Nome do Cliente: </dt>
+                            <dt class="col-sm-3">Turma: </dt>
                             <dd class="col-sm-9" id="visualizar_client_name"></dd>
 
-                            <dt class="col-sm-3">E-mail do Cliente: </dt>
+                            <dt class="col-sm-3"></dt>
                             <dd class="col-sm-9" id="visualizar_client_email"></dd>
 
                         </dl>
