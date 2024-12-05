@@ -24,20 +24,18 @@ $result_check_conflict->bindParam(':start', $dados['cad_start']);
 $result_check_conflict->bindParam(':end', $dados['cad_end']);
 $result_check_conflict->execute();
 
-// Verificar se há horários inválidos
-
-
 // Verificar se há conflitos
 if ($result_check_conflict->rowCount() > 0) {
     $retorna = [
         'status' => false,
         'msg' => 'Erro: Já existe um evento cadastrado neste horário!'
     ];
-} elseif (!empty($res)) {
-    $retorna = [
+} elseif (strtotime($dados['cad_end']) <= strtotime($dados['cad_start'])) {
+    echo json_encode([
         'status' => false,
-        'msg' => 'Existem registros com hora de término igual ou antes da hora de início!'
-    ];
+        'msg' => 'Erro: O horário de fim deve ser maior que o horário de início!'
+    ]);
+    exit;
 } else {
     // Recuperar os dados do usuário
     $query_user = "SELECT id, name, email FROM users WHERE id = :id LIMIT 1";
