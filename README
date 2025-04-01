@@ -4,8 +4,9 @@
 O **ScheduleTime** é um sistema web desenvolvido para facilitar o agendamento de salas e laboratórios na Rede Cedup.
 
 ## 🖼️ Capturas de Tela  
-![Tela Inicial](./assets/home.png)  
-![Tela de Agendamentos](./assets/agendamento.png)
+### Home ScheduleTime
+
+
 
 ## ⚙️ Instalação e Configuração  
 ### Pré-requisitos  
